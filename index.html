@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<script src="js/audiodisplay.js"></script>
+	<script src="js/recorderjs/recorder.js"></script>
+	<script src="js/main.js"></script>
+
+	<!----------------------------------------------------->
+	<!--CSS-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="main.css">
+
+	<!--FONT-->
+	<link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet">
+	<link rel="icon"
+		href="https://docs.google.com/drawings/d/e/2PACX-1vT6bcPSv0YG8PzpH7VmYMyC31LrH8CrnSFyG9DszHnfmxvMIhqg3QmdjNxlcytOcspIlnpbqH2rxVe9/pub?w=358&h=374">
+
+	<title>Hummer</title>
+	<link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+
+	<div id="mySidenav" class="sidenav" style="z-index: 1000; width:11%;">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="index.html#block2">Upload</a>
+		<a href="index.html#block3">Download</a>
+	</div>
+
+	<span
+		style="font-size:30px; cursor:pointer; margin-left: 97%; color: #fff; position: fixed; z-index: 100; margin-top: 10px;"
+		onclick="openNav()">&#9776;</span>
+
+	<div class="row block1" id="block1">
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<p class="title">
+				Hummer
+			</p>
+			<p class="description">
+				A New Way to Share your Hums with the World
+			</p>
+			<a href="index.html#block2">
+				<div id="container">
+					<div class="arrow"></div>
+				</div>
+			</a>
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		</div>
+	</div>
+	<div class="block2" id="block2">
+		<p class="uploadtext">
+			Upload Your Hum
+		</p>
+		<div id="controls buttonback">
+			<img height="80vh"
+				src="https://packinglighttravel.com/wp-content/uploads/2017/09/Just-Press-Record-button.png"
+				class="recordimg upload" id="record" onclick="toggleRecording(this);">
+		</div>
+		<div class="row" style="background-color: #000; margin-top: 20px;">
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<div id="viz" style="transform: rotateY(180deg);  margin-left: 15px;">
+					<canvas id="analyser" width="424" height="300"></canvas>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<div id="viz" style="margin-left: -13px;">
+					<canvas id="analyser2" width="400" height="200"></canvas>
+				</div>
+			</div>
+		</div>
+		<div class=" block3 row" id=block3>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<p style="margin-top: 5px; text-align: center;">
+					Download Your Hums
+				</p>
+				<a id="save" href=""><img src="http://cdn.onlinewebfonts.com/svg/download_71049.png"></a>
+
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="width:100%;">
+				<canvas id="wavedisplay" width="1024" height="500"></canvas>
+			</div>
+		</div>
+		
+	</div>
+
+</body>
+<script>
+	FilePond.parse(document.body);
+</script>
+<script>
+	function navFix() {
+		document.getElementById("mySidenav").style.display = "none";
+	}
+	window.onload = navFix();
+
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "11%";
+		document.getElementById("mySidenav").style.display = "block";
+
+	}
+
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+		document.getElementById("mySidenav").style.display = "block";
+
+	}
+</script>
+
+</html>
