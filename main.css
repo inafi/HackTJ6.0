@@ -15,7 +15,8 @@ body {
     background-size: 100%;
     background-position: 0 14%;
     background-attachment: fixed;
-    height: 40vh;
+    height: auto;
+    margin-bottom:40px;
     width: 101%;
 }
 
