@@ -5,7 +5,7 @@ html {
 body {
     overflow-x: hidden;
     font-family: "Karma", sans-serif;
-    background-color: #000;
+    background-color: #fff;
 }
 
 .block1 {
@@ -16,7 +16,7 @@ body {
     background-position: 0 14%;
     background-attachment: fixed;
     height: auto;
-    margin-bottom:40px;
+    padding-bottom:40px;
     width: 101%;
 }
 
@@ -43,7 +43,8 @@ body {
     color: #fff;
     font-size: 5vh;
     padding-top: 5vh;
-    background-color: #529FDB
+    background-color: #529FDB;
+    margin-top:-4vh;
 }
 
 .description {
@@ -386,3 +387,92 @@ canvas {
         font-size: 18px;
     }
 }
+
+footer {
+    text-align: center;
+    color:#000;
+    height: 30px;
+    font-size: 15px;
+    height: 60px;
+    margin-top:10px;
+}
+
+nav ul {
+    list-style: none;
+  }
+  
+  
+  .containers {
+    *zoom: 1;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 700px;
+    height: 100%;
+  }
+  
+  .nav {
+    margin-bottom: 48px;
+  }
+  .nav ul {
+    *zoom: 1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #333;
+  }
+  
+  .nav ul:before,
+  .nav ul:after {
+    content: "";
+    display: table;
+  }
+  .nav ul:after {
+    clear: both;
+  }
+  .nav ul > li {
+    float: left;
+    position: relative;
+  }
+  .nav a {
+    display: block;
+    padding: 10px 20px;
+    line-height: 1.2em;
+    color: #fff;
+    border-left: 1px solid #595959;
+  }
+  .nav a:hover {
+    text-decoration: none;
+    background: #595959;
+  }
+  .nav li ul {
+    background: #273754;
+  }
+  .nav li ul li {
+    width: 200px;
+  }
+  .nav li ul a {
+    border: none;
+  }
+  .nav li ul a:hover {
+    background: rgba(0, 0, 0, 0.19999999999999996);
+  }
+  
+  .nav3 ul > li:hover ul li {
+    height: 36px;
+  }
+  .nav3 li ul {
+    position: absolute;
+    left: 0;
+    top: 36px;
+    z-index: 1;
+  }
+  .nav3 li ul li {
+    overflow: hidden;
+    height: 0;
+    -webkit-transition: height 200ms ease-in;
+    -moz-transition: height 200ms ease-in;
+    -o-transition: height 200ms ease-in;
+    transition: height 200ms ease-in;
+  }
+  
